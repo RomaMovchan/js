@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 20px 0;
+}
+
+.container h4{
+    text-align: center;
+}
+.question{
+    margin-bottom: 20px;
+}
+.question label{
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.btn{
+    border:2px solid #000 !important;
+}
