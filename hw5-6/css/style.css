@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1024px;
+    margin: 0 auto;
+    padding:100px 0;
+}
+
+#mainclock{
+    width: 100%;
+    font-size: 273px;
+    display: block;
+    font-weight: bold;
+    background: #e1e3ff;
+    border:10px solid #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius:80px;
+}
+#ms{
+    font-size: 60px;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-top: -34px;
+}
+.buttons{
+    margin-top: 40px;
+}
+#startPause,
+#stop,#split{
+    border-radius:100px;
+    border:10px solid #000;
+    font-size: 48px;
+    font-weight: bold;
+    width: 30%;
+    padding: 15px;
+    cursor: pointer;
+}
+#startPause{
+    background: #1eb91e;
+    float: left;
+}
+#stop{
+    background: #D81F1F;
+    float: right;
+}
+#split{
+    float:left;
+    background: yellow;
+    margin-left: 53px;
+}
+.clear{
+    clear: both;
+}
+#split-field{
+    margin-top: 20px;
+}
+#split-field p{
+    font-size: 30px;
+    font-weight: bold
+}
