@@ -13,24 +13,27 @@ var createDOM = {
         this.div.appendChild(this.form);
         this.form.action = "test";
     },
-    createQuestion:function(question,answer){
-        var createQuestionDiv = document.createElement("div");
-        createQuestionDiv.classList.add("question");
-        var createQuestionTitle = document.createElement("b");
-        createQuestionTitle.innerHTML = question;
-        var createQuestionLabel;
-        var createQuestionCheckbox;
-        this.form.appendChild(createQuestionDiv);
-        createQuestionDiv.appendChild(createQuestionTitle);
-        this.counter++;
-        for (var i = 0; i<= answer.length-1; i++){
-            createQuestionLabel = document.createElement('label');
-            createQuestionLabel.innerHTML = ' ' + answer[i];
-            createQuestionDiv.appendChild(createQuestionLabel);
-            createQuestionCheckbox = document.createElement("input");
-            createQuestionCheckbox.type = "checkbox";
-            createQuestionCheckbox.setAttribute('id',('question#'+ this.counter + '-answer#' + (i+1)) );
-            createQuestionLabel.insertBefore(createQuestionCheckbox,createQuestionLabel.firstChild);
+
+    createQuiz:function(questions){
+        for (var i = 0; i < questions.length; i++ ){
+            var createQuestionDiv = document.createElement("div");
+            createQuestionDiv.classList.add("question");
+            var createQuestionTitle = document.createElement("b");
+            createQuestionTitle.innerHTML = questions[i].question;
+            var createQuestionLabel;
+            var createQuestionCheckbox;
+            this.form.appendChild(createQuestionDiv);
+            createQuestionDiv.appendChild(createQuestionTitle);
+            this.counter++;
+            for (var j = 0; j < questions[i].options.length; j++ ){
+                createQuestionLabel = document.createElement('label');
+                createQuestionLabel.innerHTML = ' ' + questions[i].options[j];
+                createQuestionDiv.appendChild(createQuestionLabel);
+                createQuestionCheckbox = document.createElement("input");
+                createQuestionCheckbox.type = "checkbox";
+                createQuestionCheckbox.setAttribute('id',('question#'+ this.counter + '-answer#' + (j+1)) );
+                createQuestionLabel.insertBefore(createQuestionCheckbox,createQuestionLabel.firstChild);
+            }
         }
     },
     createButton:function(name){
@@ -40,8 +43,30 @@ var createDOM = {
         this.button.innerHTML = name;
     }
 };
+
+
+var questionsArray = [
+    {
+        question: 'Вопрос №1',
+        nameOfElements: 'groupAnswers1',
+        options: ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'],
+        multiReturn: true
+    },
+    {
+        question: 'Вопрос №2',
+        nameOfElements: 'groupAnswers2',
+        options: ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'],
+        multiReturn: true
+    },
+    {
+        question: 'Вопрос №3',
+        nameOfElements: 'groupAnswers3',
+        options: ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'],
+        multiReturn: false
+    }
+];
+
+
 createDOM.createDocument();
-createDOM.createQuestion('1. Вопрос №1',  ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'] );
-createDOM.createQuestion('2. Вопрос №2',  ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'] );
-createDOM.createQuestion('3. Вопрос №3',  ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'] );
+createDOM.createQuiz(questionsArray);
 createDOM.createButton('Проверить мои результаты');
