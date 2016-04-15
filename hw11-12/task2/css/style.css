@@ -1,0 +1,32 @@
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    background: #eeeeee;
+}
+
+.container{
+    margin: 0 auto;
+    background: #fff;
+    width: 720px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(213,213,213,1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(213,213,213,1);
+    box-shadow: 0px 0px 7px 0px rgba(213,213,213,1);
+}
+.wrapp{
+    padding: 25px 50px;
+}
+.block-footer, .block{
+    padding: 25px 5px;
+}
+.block{
+    border-bottom:1px solid #7a7a7a;
+}
+.block-wrapp{
+    text-align: center;
+}
+.block ul li{
+    line-height: 22px;
+}
+.block-wrapp p{
+    font-size: 18px;
+}

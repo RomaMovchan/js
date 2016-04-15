@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tmpl.js"></script>
+    <title>Домашнее задание №11-12 Задание 2</title>
+</head>
+<body>
+<script type = "text/template" id="person">
+    <div class="container">
+        <div class="wrapp">
+            <div class="block">
+                <div class="block-wrapp">
+                    <h1><%= data[0].name %></h1>
+                    <img src="<%= data[0].imgSrc %>" alt="Моя физиономия"/>
+                    <p><%= data[0].work %></p>
+                </div>
+            </div>
+            <div class="block">
+                <h3><%= data[1].goal %></h3>
+                <ul>
+                    <%for (var i=0;i < data[1].reason.length; i++){%>
+                        <li><%= data[1].reason[i] %></li>
+                    <%}%>
+                </ul>
+            </div>
+            <div class="block">
+                <h3><%= data[2].telTitle %></h3>
+                <p><%= data[2].tel %></p>
+                <h3><%= data[2].vkTitle %></h3>
+                <a target="_blank" href="https://vk.com/<%= data[2].vkId %>">vk.com</a>
+            </div>
+            <div class="block-footer">
+                <h3><%= data[3].feedback %></h3>
+                <p><%= data[3].feedbackText %>
+                </p>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+
+</body>
+</html>
+
