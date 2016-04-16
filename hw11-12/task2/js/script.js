@@ -29,11 +29,12 @@ $(function() {
             'О себе. Живу в Красном Лимане, занимаюсь спортом, учу программирование Готов выкладываться на полную катушку, чтобы выучиться'
         }
     ];
-
+    console.log(person);
     var content = tmpl(html,{
         data:person
     });
-    console.log(person);
-    $('body').append(content);
+
+    //$('body').append(content);
+
 
 });

@@ -15,6 +15,7 @@ var createDOM = {
     },
 
     createQuiz:function(questions){
+        console.log(questions);
         for (var i = 0; i < questions.length; i++ ){
             var createQuestionDiv = document.createElement("div");
             createQuestionDiv.classList.add("question");
