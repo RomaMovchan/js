@@ -34,7 +34,7 @@ $(function() {
         data:person
     });
 
-    //$('body').append(content);
+    $('body').append(content);
 
 
 });
