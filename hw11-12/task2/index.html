@@ -48,3 +48,22 @@
 </body>
 </html>
 
+<!-- <script type = "text/template" id="test">
+        <div class="container">
+            <h4><%= data.title%></h4>
+            <form action="test">
+                <% var counter = 0;%>
+                <%for (var i=0;i < data.questions.length; i++){
+                counter++;
+                %>
+                <div class="question">
+                    <b><%= data.questions[i].question %></b>
+                    <%for (var j=0;j < data.questions[i].options.length; j++){%>
+                        <label><input id="<%=counter + '' + j %>" type="checkbox"><%= data.questions[i].options[j] %></label>
+                    <%}%>
+                </div>
+                <%}%>
+                <button class="btn btn-info">Проверить мои результаты</button>
+            </form>
+        </div>
+    </script>-->
