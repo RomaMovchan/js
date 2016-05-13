@@ -5,7 +5,8 @@ var yourAns = new Array(),
     score = 0;
 
 try{
-    var testParse = JSON.parse(localStorage.getItem('Test'));
+    var testParse = JSON.parse(localStorage.getItem('Test')),
+        testStringify = JSON.stringify(testParse);
 }
 catch(e){
     console.log("Не удалось считать из файла json.js");
