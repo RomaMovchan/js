@@ -38,8 +38,17 @@
 }
 .search-block{
     margin-left: 210px;
+    margin-top: 20px;
     width: 800px;
 }
+.search-block ul li{
+    display: inline-block;
+    margin: 0 2px;
+}
+.search-block ul li a{
+
+}
+
 .g{
     margin: 20px 0;
 }
