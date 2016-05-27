@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Домашнее задание №23-24</title>
+    
+	<script src = "js/tmpl.js" type="text/javascript"></script>
+	<!--<script src = "js/script.js" type="text/javascript"></script> -->
+
+    <script data-main = "js/app.js" src="js/require.js"></script>
+
+
+</head>
+
+<body>
+
+<script type="text/template" id = "wrapper-template">
+	<div class="wrapper">
+		<ul class="item-list">
+			
+		
+		</ul>
+		<div class="controlls">
+			<input type="text" class="item-value">
+			<button class="item-add">Add</button>
+		</div>
+	</div>	
+</script>
+
+<script type="text/template" id = "list-template">
+	<% for(var i=0; i<data.length; i++) { %>
+		<li class="list-item"><%= data[i] %></li><span data-value = "<%= data[i] %>" class="item-delete">x</span>
+	<%}%>
+</script>
+
+
+
+</body>
+</html>
+
