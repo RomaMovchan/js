@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
   
     <title>Домашнее задание №23-24</title>
-    
-	<script src = "js/tmpl.js" type="text/javascript"></script>
-	<!--<script src = "js/script.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script data-main = "js/app.js" src="js/require.js"></script>
+   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+	<script src = "js/tmpl.js" type="text/javascript"></script>
+
+	<!--<script src = "js/script.js" type="text/javascript"></script>--> 
+
+    <script data-main = "js/app.js" src="js/require.js"></script> 
 
 
 </head>
@@ -30,8 +33,10 @@
 
 <script type="text/template" id = "list-template">
 	<% for(var i=0; i<data.length; i++) { %>
-		<li class="list-item"><%= data[i] %></li><span data-value = "<%= data[i] %>" class="item-delete">x</span>
+		<div><li class="list-item"><%= data[i] %></li><span data-value = "<%= data[i] %>" class="item-delete">x</span></div>
+		<div class="clear"></div>
 	<%}%>
+			
 </script>
 
 
