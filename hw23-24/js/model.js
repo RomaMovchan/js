@@ -30,13 +30,6 @@ define(
 
 					return self.data;
 				};
-
-				self.renameItem = function(item){
-					var index = self.data.indexOf(item);;
-					var newName = prompt("Новое значение");
-					self.data[index] = newName;
-					return self.data;
-				}
 			}
 		};
 	}

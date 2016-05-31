@@ -15,7 +15,7 @@ define(
 				}
 				
 				view.elements.listContainer.delegate('.item-delete', 'click', removeItem);
-				view.elements.listContainer.delegate('.list-item', 'click', renameItem);
+				view.elements.listContainer.delegate('.list-item', 'click', updateItem);
 					
 
 				function addItem(){
@@ -25,30 +25,23 @@ define(
 					view.elements.input.val('');
 				}
 
-
-
-				function removeItemObj(obj){
-					console.log(obj);
-					var item =  obj.attr('data-value');
-					model.removeItem(item);
-					view.renderList(model.data);
-				}
-
-
 				function removeItem(){
-					
+				
 					var item =  $(this).attr('data-value');
 					model.removeItem(item);
 					view.renderList(model.data);
 				}
 
-				function renameItem(){
-					var elem =  $(this).html();
-					var elemIndex = $(this)
-
-					console.log(elemIndex);
-					model.renameItem(elem);
-					view.renderList(model.data);
+				function updateItem() {
+					for (var i = 0; i < model.data.length; i++) {
+						console.log(model.data);
+						var arr = $('.list-item');
+						if (arr[i].innerHTML === model.data[i]) {
+							return;
+						} else {
+							model.data[i] = arr[i].innerHTML;
+						}
+					}
 				}
 			}
 		}

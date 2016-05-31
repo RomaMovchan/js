@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <title>Домашнее задание №13-14</title>
+
+    <script src="dist/json.js"></script>
+
+
+</head>
+
+<body>
+<div id="openModal">
+    <div class="name"></div>
+    <div class="result"></div>
+</div>
+<div id="openModalOverlay" onclick="closeInBasket();return false;"></div>
+
+
+
+
+
+<script type = "text/template" id="test">
+    <div class="container">
+        <h4><%= data.title %></h4>
+        <form action="test" id="testForm">
+            <% var counter = 0;
+            var type = "radio";
+            for (var i=0;i < data.questions.length; i++){
+            counter++;%>
+            <div class="question">
+                <b><%=counter+'.' + ' ' + data.questions[i].questionName %></b>
+                <%for (var j=0;j < data.questions[i].options.length; j++){
+                    if(data.questions[i].multiReturn){
+                       type = "checkbox";
+                    }else{
+                        type = "radio";
+                    }%>
+                    <label>
+                        <input data="<%= i%>" id="<%=counter + '' + j %>" name = "<%= data.questions[i].name %>" type="<%= type %>" value="<%=j%>"><%= data.questions[i].options[j] %>
+                    </label>
+                <%}%>
+            </div>
+            <%}%>
+            <a class="btn btn-info">Проверить мои результаты</a>
+        </form>
+    </div>
+</script>
+
+<script src="js/src/tmpl.js"></script>
+<script src="js/dist/script.js"></script>
+
+
+
+
+</body>
+</html>
+
