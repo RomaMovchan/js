@@ -1,8 +1,8 @@
 
 var app = require('../js/app.js');
 
-describe("A suite", function() {
-    it("Hello World", function() {
+describe("Pow function",() => {
+    it("Simple Jasmine test Hello World",() => {
         //prepare
         var result;
         //act
@@ -11,8 +11,8 @@ describe("A suite", function() {
         expect(result).toBe("Hello, World!");
     });
 
-
-    it("Pow not equal", function() {
+//'should failed if exponent not a number'
+    it("Should failed, if test value not equal function result",() => {
         //prepare
         var result;
         //act
@@ -21,7 +21,7 @@ describe("A suite", function() {
         expect(result).toEqual(3);
     });
 
-    it("Pow equal", function() {
+    it("Should be true, function result equal test value",() => {
         //prepare
         var result;
         //act
@@ -29,21 +29,21 @@ describe("A suite", function() {
         //assert
         expect(result).toEqual(1);
     });
-    it("Pow undefined", function() {
+    it("Should failed, if exponent is undefined and test result not undefined",() => {
         //prepare
         var result;
         //act
         result = app.pow("asdasd",2);
         //assert
-        expect(result).toBeUndefined;
+        expect(result).not.toBeUndefined();
     });
-    it("Pow not undefined", function() {
+    it("Should failed, if function result is number and test result is undefined",() => {
         //prepare
         var result;
         //act
         result = app.pow(1,2);
         //assert
-        expect(result).not.toBeUndefined;
+        expect(result).toBeUndefined();
     });
 
 });
