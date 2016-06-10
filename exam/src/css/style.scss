@@ -1,0 +1,429 @@
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+
+.wrapper{
+  width:940px;
+  margin:0 auto;
+}
+.header{
+  width:1440px;
+  background:url('../img/header-bg.png') no-repeat center;
+  height:700px;
+	.header-wrapper{
+		width: 940px;
+		margin: 0 auto;
+	}
+  .header__logo{
+  	float: left;
+  	margin-top:47px;
+  	font-size: 20px;
+  	color:$color-White;
+  	font-family: $fontMontserrat-Bold;
+  	cursor:default;
+  }
+  .header__signup{
+  	float: right;
+  	margin-top:39px;
+  	
+  	.header__signup-login{
+  		display: inline-block;
+  		*display:inline;
+  		color:$color-White;
+	  	font-family: $fontMontserrat-Bold;
+	  	font-size: 14px;
+	  	margin-right:14px;
+  	}
+  	.header__signup-signup{
+  		display: inline-block;
+  		*display:inline;
+  		margin-right:3px;
+  		border:2px solid $color-White;
+  		-moz-border-radius: 25px; /* Firefox */
+	  	-webkit-border-radius: 25px; /* Safari, Chrome */
+	  	-khtml-border-radius: 25px; /* KHTML */
+	  	border-radius: 25px; /* CSS3 */
+	  	/* Для плохих IE */
+	  	behavior: url(border-radius.htc); /* учим IE border-radius */
+  		padding: 7px 14px;
+  		color:$color-White;
+	  	font-family: $fontMontserrat-Bold;
+	  	font-size: 14px;
+  	}
+  }
+  .header__main{
+  	width: 485px;
+  	margin: 0 auto;
+  	text-align: center;
+  	margin-top: 145px;
+  	.header__title{
+  		font-size: 52px;
+  		font-weight: bold;
+  		cursor: default;
+  		color:$color-White;
+  		font-family: $fontMontserrat-Bold;
+  	}
+  	.header__title2{
+  		display: block;
+  		cursor: default;
+  		margin-top: 26px;
+  		margin-bottom: 35px;
+  		font-family: $fontRoboto-Light;
+  		font-size: 24px;
+  		color: $color-White;
+  		letter-spacing: 2px;
+  		font-weight: lighter;
+  	}
+  }
+  .header__button{
+  	font-size: 14px;
+  	font-family: $fontMontserrat-Bold;
+  	font-weight: bold;
+  	background: #ff4e50;
+  	padding: 12px 27px;
+  	-moz-border-radius: 25px; /* Firefox */
+  	-webkit-border-radius: 25px; /* Safari, Chrome */
+  	-khtml-border-radius: 25px; /* KHTML */
+  	border-radius: 25px; /* CSS3 */
+  	/* Для плохих IE */
+  	behavior: url(border-radius.htc); /* учим IE border-radius */
+  	color: $color-White;
+  	border:none;
+  	cursor:pointer;
+  }
+}
+
+.howworks{
+	width:1440px;
+	text-align: center;
+	.howworks__wrapp{
+		padding: 95px 0 20px 0;
+		h1{
+			font-family: $fontMontserrat-Bold;
+			font-weight: bold;
+			font-size: 22px;
+			color: $color-Black;
+		}
+	}
+	.howworks__sliders{
+		margin-top: 35px;
+		.howworks__item{
+			width: 300px;
+			display: inline-block;
+			*display:inline;
+			.bx-bg{
+				background:#000;
+					-webkit-border-radius: 5px;
+					        border-radius: 5px;
+				img{
+					display: block;
+					opacity: 0.6; /* Значение прозрачности */
+    				filter: alpha(Opacity=70); /* Прозрачность в IE */
+				}
+			}
+			.slider-block{
+				position: absolute;
+			    bottom: 2px;
+    			height: 170px;
+			    z-index: 1000;
+			    text-align: left;
+			    padding: 0 0 0 20px;
+			    .slider-steps{
+					background: #ff4e50;
+					text-transform: uppercase;
+					font-size: 10px;
+					font-family:$fontMontserrat-Regular;
+					color: $color-White;
+					padding: 5px 0px;
+    				text-align: center;
+					width: 72px;
+					display: block;
+					-webkit-border-radius: 25px;
+					        border-radius: 25px;
+				}
+				.slider-title{
+					color: $color-White;
+					font-family:$fontMontserrat-Bold;
+					display: block;
+					font-weight: bold;
+					margin-top: 14px;
+					margin-bottom: 12px;
+				
+					font-size: 24px;
+				}
+				.slider-text{
+					color: #ccc;
+					//color: #fff;
+					font-size: 14px;
+					font-family: $fontRoboto-Light;
+					font-weight: lighter;
+				}
+			}
+		
+		}
+		.howworks__item-center{
+			margin: 0 15px;
+		}
+	}
+	
+}
+
+.partners{
+	width:1440px;
+	text-align: center;
+	.partners__wrapp{
+		padding: 72px 0 20px 0;
+		h1{
+			font-family: $fontMontserrat-Bold;
+			font-weight: bold;
+			font-size: 22px;
+			color: $color-Black;
+		}
+		.partner__block{
+			margin-top: 30px;
+			.partners-item{
+				float: left;
+				width: 235px;
+				.partners-img{
+					text-align: center;
+					position: relative;
+					img{
+						
+					}
+					.img-sprite{
+						position: absolute;
+						bottom: -2px;
+    					right: 57px;
+						width: 40px;
+						height: 40px;
+						background: url(../img/sprites/sprite.png);
+					}
+					.partner2{
+						background-position: -40px 0;
+						right: 54px;
+					}
+					.partner3{
+						background-position: -82px 0;
+    					right: 50px;
+					}
+					.partner4{
+						background-position: -124px 0;
+						right: 50px;
+					}
+				}
+				.partners-desc{
+					margin-top: 15px;
+					.name{
+						color: $color-Black;
+						font-family: $fontMontserrat-Bold ;
+						font-size: 14px;
+						font-weight: bold;
+				
+					}
+					.desc{
+						font-size: 14px;
+						padding: 0 10px;
+						margin-top: 15px;
+						color: #666;
+						font-family: $fontRoboto-Light;
+						font-weight: lighter;
+					}
+				}
+			}
+		}
+	}
+	.partners-button{
+		margin-top: 24px;
+		.see-partners{
+			border:2px solid #ff4e50;
+			color:#ff4e50;
+			background: #FFF;
+			font-family:$fontMontserrat-Bold;
+			font-weight: bold;
+			font-size: 14px;
+			padding: 10px 30px;
+			-moz-border-radius: 25px; /* Firefox */
+		  	-webkit-border-radius: 25px; /* Safari, Chrome */
+		  	-khtml-border-radius: 25px; /* KHTML */
+		  	border-radius: 25px; /* CSS3 */
+		  	/* Для плохих IE */
+		  	behavior: url(border-radius.htc); /* учим IE border-radius */
+			
+			cursor:pointer;
+		}
+	}
+}
+
+.holiday{
+	width:1440px;
+	text-align: center;
+	.holiday__wrapp{
+		padding: 77px 0 0 0;
+		width: 955px;
+		h1{
+			font-family: $fontMontserrat-Bold;
+			font-weight: bold;
+			font-size: 22px;
+			color: $color-Black;
+		}
+		.grid{
+			margin-top: 33px;
+			height: 940px !important;
+			.grid-item { 
+				width: 300px;
+				position: relative;
+				background:#000;
+				margin-bottom: 20px;
+				margin:0 7px 20px 7px;
+				-moz-border-radius: 8px; /* Firefox */
+			  	-webkit-border-radius: 8px; /* Safari, Chrome */
+			  	-khtml-border-radius: 8px; /* KHTML */
+			  	border-radius: 8px; /* CSS3 */
+			  	/* Для плохих IE */
+			  	behavior: url(border-radius.htc); /* учим IE border-radius */
+				img{
+					width:100%;
+					height: 310px;
+					display: block;
+					opacity: 0.7; 
+					-moz-border-radius: 8px; /* Firefox */
+				  	-webkit-border-radius: 8px; /* Safari, Chrome */
+				  	-khtml-border-radius: 8px; /* KHTML */
+				  	border-radius: 8px; /* CSS3 */
+				  	/* Для плохих IE */
+				  	behavior: url(border-radius.htc); /* учим IE border-radius */
+	    			filter: alpha(Opacity=70); 
+				}
+				span{
+					position: absolute;
+					top: 46%;
+					left: 15%;
+					display: block;
+					right: 15%;
+					font-size: 22px;
+					color: #FFF;
+					font-family: $fontMontserrat-Bold;
+				} 
+			}
+			.grid-item--width2 { 
+				width: 610px; 
+			
+			}
+		}
+	}
+}
+
+.ideas{
+	width:1440px;
+	text-align: center;
+	.ideas__wrapp{
+		padding: 79px 0 100px 0;
+		h1{
+			font-family: $fontMontserrat-Bold;
+			font-weight: bold;
+			font-size: 22px;
+			color: $color-Black;
+		}
+		p{
+			margin-top: 33px;
+			color: #333333;
+			font-size: 18px;
+			font-family: $fontRoboto-Light;
+			font-weight: lighter;
+		}
+		.ideas__search{
+			margin-top: 40px;
+			.search-field{
+				padding: 10px 0px 10px 10px;
+    			width: 222px;
+				font-size: 14px;
+				border:1px solid #ccc;
+				-moz-border-radius: 3px; /* Firefox */
+			  	-webkit-border-radius: 3px; /* Safari, Chrome */
+			  	-khtml-border-radius: 3px; /* KHTML */
+			  	border-radius: 3px; /* CSS3 */
+			  	/* Для плохих IE */
+			  	behavior: url(border-radius.htc); /* учим IE border-radius */
+			}
+			.search-partner{
+				color: #FFF;
+				border:none;
+				font-weight: bold;
+				padding: 12px 32px;
+				background: #ff4e50;
+				-moz-border-radius: 25px; /* Firefox */
+			  	-webkit-border-radius: 25px; /* Safari, Chrome */
+			  	-khtml-border-radius: 25px; /* KHTML */
+			  	border-radius: 25px; /* CSS3 */
+			  	/* Для плохих IE */
+			  	behavior: url(border-radius.htc); /* учим IE border-radius */
+			}
+		}
+	}
+}
+.footer{
+	width:1440px;
+	border-top:3px solid #ff4e50;
+	.footer-wrapp{
+		padding: 38px 0;
+		.footer__logo{
+			float: left;
+			width: 239px;
+			a{
+				font-size: 16px;
+				color: #ff4e50;
+				font-family: $fontMontserrat-Bold;
+				font-weight: bold;
+			}
+		}
+		.footer__menu{
+			width: 160px;
+			float: left;
+			p{
+				font-family: $fontMontserrat-Bold;
+				font-weight: bold;
+				color: #000;
+				font-size: 14px;
+			}
+			ul{
+				margin-top: 8px;
+				li{
+					list-style-type: none;
+					padding: 3px 0;
+					a{
+						color: #666;
+						font-family: $fontRoboto-Light;
+						font-weight: lighter;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.footer__dev{
+			float: right;
+		}
+	}
+}
+#item1{
+	
+}
+#item2{
+	
+}
+#item3{
+	
+}
+#item4{
+	margin-top: 300px;
+}
+#item5{
+	margin-top: 300px;
+}
+#item6{
+	margin-top: 300px;
+}
+#item7{
+	margin-top: 300px;
+}
