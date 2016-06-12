@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 var sprite = require('gulp-sprite-generator');
-
+var concatCss = require('gulp-concat-css');
 
 
 var path = {
@@ -54,6 +54,11 @@ var config = {
     logPrefix: "Frontend_Devil"
 };
 
+gulp.task('concatCss', function () {
+  return gulp.src('build/**/*.css')
+    .pipe(concatCss("main.css"))
+    .pipe(gulp.dest('build/css')); //???
+});
 
 gulp.task('images-retine', images);
  
@@ -137,6 +142,7 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
+   
     'image:build'
 ]);
 
@@ -161,3 +167,5 @@ gulp.task('watch', function(){
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
+
+gulp.task('default', ['watch', 'build', 'images-retine']);

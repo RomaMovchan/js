@@ -1,126 +1,131 @@
-.header{
+
+@media only screen and (max-width:320px) { /* Минимум 512 цветов */
+ .header{
 	width: 320px;
-}
-.header .header-wrapper,.wrapper{
-	width: 285px;
-}
-.header__logo{
+	}
+	.header .header-wrapper,.wrapper{
+		width: 285px;
+	}
+	.header__logo{
 
-}
-.header__signup{
-	width: 100%;
+	}
+	.header__signup{
+		width: 100%;
+	}
+
+	.header .header__main{
+		width: 100%;
+	}
+	.howworks,.partners,.holiday,.ideas,.footer{
+		width: 320px;
+	}
+	.header .header__signup{
+		text-align: center;
+	}
+	.header .header__logo{
+		text-align: center;
+		width: 100%;
+		margin-top: 150px;
+	}
+	.header .header__main{
+		margin-top:50px;
+	}
+	.header .header__main .header__title{
+		font-size: 30px;
+	}
+	.header .header__main .header__title2{
+		font-size: 18px;
+	}
+	.howworks .howworks__wrapp{
+		padding: 25px 0 20px;
+	}
+	.howworks .howworks__sliders .howworks__item{
+		width: 285px;
+		margin-bottom: 10px;
+	}
+	.bx-wrapper .bx-viewport{
+		height: 240px !important;
+	}
+	.bx-wrapper img{
+		height: 240px;
+		width: 300px;
+	}
+	.howworks .howworks__sliders .howworks__item-center {
+	    margin-left:0px;
+	    margin-right:0px;
+	}
+	.bx-wrapper .bx-controls-direction a{
+		display: none;
+	}
+	.howworks .howworks__sliders .howworks__item .slider-block{
+		height: 180px;
+	}
+	.partners .partners__wrapp {
+	    padding: 25px 0 20px;
+	}
+	.partners .partners__wrapp .partner__block .partners-item {
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	.partners .partners__wrapp .partner__block .partners-item .partners-img .img-sprite{
+		bottom: 10px;
+		right: 76px;
+	}
+	.partners .partners__wrapp .partner__block .partners-item .partners-img .partner2,
+	.partners .partners__wrapp .partner__block .partners-item .partners-img .partner3,
+	.partners .partners__wrapp .partner__block .partners-item .partners-img .partner4{
+		   right: 75px;
+	}
+	.holiday .holiday__wrapp{
+		padding: 25px 0 0;
+	}
+
+	.ideas .ideas__wrapp p{
+		margin-top: 15px;
+	}
+	.ideas .ideas__wrapp .ideas__search{
+		margin-top: 15px;
+	}
+	.ideas .ideas__wrapp .ideas__search .search-partner{
+		width: 100%;
+		margin-top: 15px;
+	}
+	.ideas .ideas__wrapp .ideas__search .search-field{
+		width: 100%;
+		padding: 10px 0 10px 0;
+	}
+	.ideas .ideas__wrapp {
+	    padding: 25px 0 25px;
+	}
+	.footer{
+		text-align: center;
+	}
+	.footer .footer-wrapp .footer__logo,
+	.footer__dev{
+		width: 100%;
+	}
+	.footer .footer-wrapp .footer__menu{
+		width: 100%;
+		margin-top: 10px;
+	}
+	.footer .footer-wrapp .footer__menu ul li{
+		display: inline-block;
+		*display: inline;
+	}
+	.footer__dev{
+		margin-top: 10px;
+	}
+
+	.holiday .holiday__wrapp{
+		width: 310px;
+	}
+	.holiday .holiday__wrapp .grid .grid-item{
+		width: 300px;
+		margin:0 5px 20px 5px;
+	}
+	.holiday .holiday__wrapp .grid .grid-item--width2{
+		width: 300px;
+	}
 }
 
-.header .header__main{
-	width: 100%;
-}
-.howworks,.partners,.holiday,.ideas,.footer{
-	width: 320px;
-}
-.header .header__signup{
-	text-align: center;
-}
-.header .header__logo{
-	text-align: center;
-	width: 100%;
-	margin-top: 150px;
-}
-.header .header__main{
-	margin-top:50px;
-}
-.header .header__main .header__title{
-	font-size: 30px;
-}
-.header .header__main .header__title2{
-	font-size: 18px;
-}
-.howworks .howworks__wrapp{
-	padding: 25px 0 20px;
-}
-.howworks .howworks__sliders .howworks__item{
-	width: 285px;
-	margin-bottom: 10px;
-}
-.bx-wrapper .bx-viewport{
-	height: 240px !important;
-}
-.bx-wrapper img{
-	height: 240px;
-	width: 300px;
-}
-.howworks .howworks__sliders .howworks__item-center {
-    margin-left:0px;
-    margin-right:0px;
-}
-.bx-wrapper .bx-controls-direction a{
-	display: none;
-}
-.howworks .howworks__sliders .howworks__item .slider-block{
-	height: 180px;
-}
-.partners .partners__wrapp {
-    padding: 25px 0 20px;
-}
-.partners .partners__wrapp .partner__block .partners-item {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.partners .partners__wrapp .partner__block .partners-item .partners-img .img-sprite{
-	bottom: 10px;
-	right: 76px;
-}
-.partners .partners__wrapp .partner__block .partners-item .partners-img .partner2,
-.partners .partners__wrapp .partner__block .partners-item .partners-img .partner3,
-.partners .partners__wrapp .partner__block .partners-item .partners-img .partner4{
-	   right: 75px;
-}
-.holiday .holiday__wrapp{
-	padding: 25px 0 0;
-}
 
-.ideas .ideas__wrapp p{
-	margin-top: 15px;
-}
-.ideas .ideas__wrapp .ideas__search{
-	margin-top: 15px;
-}
-.ideas .ideas__wrapp .ideas__search .search-partner{
-	width: 100%;
-	margin-top: 15px;
-}
-.ideas .ideas__wrapp .ideas__search .search-field{
-	width: 100%;
-	padding: 10px 0 10px 0;
-}
-.ideas .ideas__wrapp {
-    padding: 25px 0 25px;
-}
-.footer{
-	text-align: center;
-}
-.footer .footer-wrapp .footer__logo,
-.footer__dev{
-	width: 100%;
-}
-.footer .footer-wrapp .footer__menu{
-	width: 100%;
-	margin-top: 10px;
-}
-.footer .footer-wrapp .footer__menu ul li{
-	display: inline-block;
-	*display: inline;
-}
-.footer__dev{
-	margin-top: 10px;
-}
-
-.holiday .holiday__wrapp{
-	width: 310px;
-}
-.holiday .holiday__wrapp .grid .grid-item{
-	width: 300px;
-	margin:0 5px 20px 5px;
-}
-.holiday .holiday__wrapp .grid .grid-item--width2{
-	width: 300px;
-}
