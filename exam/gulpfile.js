@@ -60,21 +60,7 @@ gulp.task('concatCss', function () {
     .pipe(gulp.dest('build/css')); //???
 });
 
-gulp.task('images-retine', images);
- 
-function images(file) {
- 
-  console.log('Retinizing images...');
- 
-  return gulp.src(file && file.path || 'build/img/**/*.{png,jpg,jpeg}')
-    .pipe(retinize(retinizeOpts))
-    .on('error', function(e) {
-      console.log(e.message);
-    })
-    .pipe(gulp.dest('build/retine/'))
-  ;
- 
-}
+
 
 
 
@@ -142,7 +128,6 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-   
     'image:build'
 ]);
 
@@ -168,4 +153,4 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['watch', 'build', 'images-retine']);
+gulp.task('default', ['watch', 'build']);
